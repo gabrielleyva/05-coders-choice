@@ -1,18 +1,27 @@
-Name: ____________           ID:   ____________
+Name: __Gabriel Leyva__           ID:   _44683422_
 
 ## Proposed Project
 
-> Replace this paragraph with the description of what your project
-> will do. Tell me what kind of interface it will have, and roughly
-> how it will work. I don't need more than three or four sentences,
-> unless you feel compelled to write more.
+  My application will allow users to share if they are going out at night. It will also let users recieve notifications if
+  other users are going out. I will be using an iOS as my UI. The application is simple, anyone who has the app is able to share if they
+  are going out that night with a push of a button and recieve notifications from other users who are going out. When a user opens the app   he or she will able to enter a username 
 
 ## Outline Structure
 
-> Describe how you'll organize your code. What is the process and
-> supervision structure? If it uses a framework, how does it fit in. I
-> just need to understand the direction you plan to take. Again, three
-> or four sentences are probably enough.
+My project will be organaized the following way:
+Mobile App:
+-MVC Architecture
+-Swift Elixir Phoenix Client: https://github.com/davidstump/SwiftPhoenixClient (Kinda like web sockets)
+
+Elixir Application:
+-API
+-Server
+-Implemenation
+
+Everytime one of the apps is fired up a process will be created to represent that particular user.
+I will use a supervisor with the restart strategy transient because I want the process to restart only if
+it terminates abnormally since this application can be considered to be a communication app. 
+
 
 
 
