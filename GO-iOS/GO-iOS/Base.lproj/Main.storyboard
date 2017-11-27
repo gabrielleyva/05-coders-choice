@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jRj-tP-V1u">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="489"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="LR6-0Q-64w">
@@ -32,19 +32,43 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4m-NO-4fM">
+                                <rect key="frame" x="137" y="607" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fpK-sD-NNR"/>
+                                    <constraint firstAttribute="width" constant="100" id="vGU-5f-wZC"/>
+                                </constraints>
+                                <state key="normal" title="Go Out"/>
+                                <connections>
+                                    <action selector="goOutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTQ-8e-17z"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QGm-eC-mc8">
+                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jRj-tP-V1u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A1g-qP-cXh"/>
-                            <constraint firstItem="jRj-tP-V1u" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZQ9-TF-OKT"/>
-                            <constraint firstItem="jRj-tP-V1u" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fuV-e3-YqB"/>
-                            <constraint firstItem="jRj-tP-V1u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sM6-EX-piV"/>
+                            <constraint firstItem="jRj-tP-V1u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="52d-Y5-PxE"/>
+                            <constraint firstItem="jRj-tP-V1u" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GdW-V7-ZIZ"/>
+                            <constraint firstItem="QGm-eC-mc8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="HS1-6S-Ko2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QGm-eC-mc8" secondAttribute="trailing" constant="16" id="HZh-J9-PyD"/>
+                            <constraint firstItem="QGm-eC-mc8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MmX-SK-JHM"/>
+                            <constraint firstItem="v4m-NO-4fM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T80-Xp-mM4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v4m-NO-4fM" secondAttribute="bottom" constant="20" id="dEq-4y-PDX"/>
+                            <constraint firstItem="jRj-tP-V1u" firstAttribute="top" secondItem="QGm-eC-mc8" secondAttribute="bottom" constant="8" id="nMb-wU-0AN"/>
+                            <constraint firstItem="v4m-NO-4fM" firstAttribute="top" secondItem="jRj-tP-V1u" secondAttribute="bottom" constant="8" id="y19-vh-x0s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="WVU-Pu-Hcj"/>
                     <connections>
+                        <outlet property="goOutButton" destination="v4m-NO-4fM" id="oLq-hT-flT"/>
                         <outlet property="tableView" destination="jRj-tP-V1u" id="M6f-hY-NSd"/>
+                        <outlet property="textField" destination="QGm-eC-mc8" id="o0G-sl-aJy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
